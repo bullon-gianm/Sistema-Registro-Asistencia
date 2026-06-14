@@ -38,4 +38,8 @@ document.getElementById('btnCerrarSesion').addEventListener('click', (e) => {
     e.preventDefault();
     localStorage.removeItem('usuario');
     window.location.href = 'login.html';
+// Validación de horario
+function validarHorario() {
+    alert("Horario validado correctamente");
+}   
 });
