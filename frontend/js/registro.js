@@ -38,4 +38,9 @@ document.getElementById('btnCerrarSesion').addEventListener('click', (e) => {
     e.preventDefault();
     localStorage.removeItem('usuario');
     window.location.href = 'login.html';
+
+// Mensaje de confirmación
+function confirmarRegistro() {
+    alert("Asistencia registrada correctamente");
+}    
 });
