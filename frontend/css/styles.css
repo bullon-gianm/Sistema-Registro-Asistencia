@@ -1,0 +1,131 @@
+/* Paleta de Colores Cyberpunk / Neón */
+:root {
+    --bg-dark: #0a0b10;
+    --card-bg: #121420;
+    --neon-cyan: #00f0ff;
+    --neon-magenta: #ff007f;
+    --neon-green: #39ff14;
+    --text-white: #f0f3f8;
+    --shadow-cyan: 0 0 15px #00f0ff, 0 0 30px rgba(0, 240, 255, 0.3);
+    --shadow-magenta: 0 0 15px #ff007f, 0 0 30px rgba(255, 0, 127, 0.3);
+    --shadow-green: 0 0 15px #39ff14, 0 0 30px rgba(57, 255, 20, 0.3);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Roboto, sans-serif; }
+
+body { 
+    background: var(--bg-dark); 
+    background-image: radial-gradient(circle at 50% 50%, #1a1c2e 0%, #0a0b10 100%);
+    display: flex; justify-content: center; align-items: center; min-height: 100vh; 
+    color: var(--text-white);
+    overflow-x: hidden;
+}
+
+/* Contenedores con Efecto de Cristal y Bordes de Neón */
+.container { 
+    background: var(--card-bg); 
+    padding: 40px 30px; 
+    border-radius: 16px; 
+    border: 2px solid var(--neon-cyan);
+    box-shadow: var(--shadow-cyan);
+    width: 100%; max-width: 450px; text-align: center; 
+    transition: all 0.4s ease;
+    backdrop-filter: blur(10px);
+}
+
+/* Contenedor del Administrador con diseño Neon Magenta Diferente */
+.admin-container { 
+    background: #0f111a;
+    max-width: 1000px; width: 95%; padding: 40px; 
+    border-radius: 20px;
+    border: 2px solid var(--neon-magenta);
+    box-shadow: var(--shadow-magenta);
+    transition: all 0.4s ease;
+}
+
+h2 { margin-bottom: 25px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; text-shadow: 0 0 8px currentColor; }
+.cyan-text { color: var(--neon-cyan); }
+.magenta-text { color: var(--neon-magenta); }
+
+/* Inputs Futuristas */
+input, select { 
+    width: 100%; padding: 14px; margin: 12px 0; 
+    background: #1b1d2e; border: 1px solid #333; border-radius: 8px; 
+    font-size: 16px; color: white; transition: all 0.3s ease;
+}
+input:focus, select:focus {
+    border-color: var(--neon-cyan);
+    box-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+    outline: none;
+}
+
+/* Botonera de Marcado e Interacciones con Animación de Clic Adictiva */
+.btn-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 25px 0; }
+
+button { 
+    padding: 15px 20px; border: none; border-radius: 8px; font-size: 16px; 
+    cursor: pointer; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;
+    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative; overflow: hidden;
+}
+
+/* Efectos Activos de Presión Mecánica */
+button:active { transform: scale(0.92); filter: brightness(1.2); }
+
+.btn-cyan { background: transparent; border: 2px solid var(--neon-cyan); color: var(--neon-cyan); text-shadow: 0 0 5px var(--neon-cyan); }
+.btn-cyan:hover { background: var(--neon-cyan); color: #000; box-shadow: var(--shadow-cyan); }
+
+.btn-magenta { background: transparent; border: 2px solid var(--neon-magenta); color: var(--neon-magenta); text-shadow: 0 0 5px var(--neon-magenta); }
+.btn-magenta:hover { background: var(--neon-magenta); color: #000; box-shadow: var(--shadow-magenta); }
+
+.btn-green { background: transparent; border: 2px solid var(--neon-green); color: var(--neon-green); text-shadow: 0 0 5px var(--neon-green); }
+.btn-green:hover { background: var(--neon-green); color: #000; box-shadow: var(--shadow-green); }
+
+/* Enlaces y Navegación Inferior */
+.nav-links { margin-top: 25px; display: flex; justify-content: space-between; font-size: 14px; gap: 10px; }
+.nav-links a { color: #8a92b2; text-decoration: none; transition: color 0.3s; padding: 5px; }
+.nav-links a:hover { color: var(--neon-cyan); text-shadow: 0 0 5px var(--neon-cyan); }
+
+/* Tablas Holográficas de Datos */
+table { width: 100%; margin-top: 25px; border-collapse: collapse; background: #131622; border-radius: 8px; overflow: hidden; }
+th, td { padding: 16px; text-align: left; border-bottom: 1px solid #222538; }
+th { background: #1b1f33; color: var(--neon-cyan); text-transform: uppercase; font-size: 13px; letter-spacing: 1px; }
+tr:hover { background: #1c2035; }
+
+/* Credenciales y Etiquetas */
+.badge-salida { color: var(--neon-magenta); font-weight: bold; text-shadow: 0 0 5px var(--neon-magenta); }
+.badge-entrada { color: var(--neon-green); font-weight: bold; text-shadow: 0 0 5px var(--neon-green); }
+
+/* Botones de acción rápidos en tablas */
+.btn-action { padding: 6px 12px; font-size: 12px; margin: 0 4px; border-radius: 4px; display: inline-block; }
+.btn-edit { border: 1px solid var(--neon-cyan); color: var(--neon-cyan); background: transparent; }
+.btn-edit:hover { background: var(--neon-cyan); color: #000; box-shadow: var(--shadow-cyan); }
+.btn-delete { border: 1px solid var(--neon-magenta); color: var(--neon-magenta); background: transparent; }
+.btn-delete:hover { background: var(--neon-magenta); color: #000; box-shadow: var(--shadow-magenta); }
+
+/* Ventana Modal Flotante (Efecto Cyberpunk) */
+.modal {
+    display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(5, 6, 10, 0.85); backdrop-filter: blur(8px);
+    justify-content: center; align-items: center; z-index: 1000;
+}
+.modal-content {
+    background: var(--card-bg); padding: 30px; border-radius: 12px;
+    border: 2px solid var(--neon-cyan); box-shadow: var(--shadow-cyan);
+    width: 90%; max-width: 400px; text-align: center;
+}
+
+/* Corrección para que la tabla sea responsiva y no se descuadre */
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 25px;
+    border-radius: 8px;
+    border: 1px solid #222538;
+}
+
+/* Forzar a la tabla a mantener su estructura sin aplastar el texto */
+table {
+    margin-top: 0 !important;
+    min-width: 800px;
+}

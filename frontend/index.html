@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Panel de Control - Asistencia</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2 id="bienvenida" class="cyan-text">Cargando Sistema...</h2>
+        <p style="color: #8a92b2; font-size: 14px; margin-bottom: 10px;">SELECCIONE LA ACCIÓN DE REGISTRO REGULADO</p>
+        
+        <!-- Botonera Dividida en Entrada y Salida -->
+        <div class="btn-grid">
+            <button id="btnEntrada" class="btn-green">Entrada</button>
+            <button id="btnSalida" class="btn-magenta">Salida</button>
+        </div>
+        
+        <div class="nav-links">
+            <a href="historial.html">📈 Mi Historial</a>
+            <a href="reportes.html" id="linkAdmin" style="display:none; color: var(--neon-magenta); font-weight: bold;">⚙️ Panel Admin</a>
+            <a href="#" id="btnCerrarSesion">❌ Salir</a>
+        </div>
+    </div>
+    <script src="js/registro.js"></script>
+</body>
+</html>

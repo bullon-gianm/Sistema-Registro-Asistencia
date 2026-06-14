@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Crear Cuenta</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Crear Nuevo Usuario</h2>
+        <form id="registroForm">
+            <input type="text" id="nombre" placeholder="Nombre Completo" required>
+            <input type="email" id="correo" placeholder="Correo Electrónico" required>
+            <input type="password" id="password" placeholder="Contraseña" required>
+            <select id="rol">
+                <option value="empleado">Empleado</option>
+                <option value="admin">Administrador</option>
+            </select>
+            <button type="submit">Registrar</button>
+        </form>
+        <div class="nav-links">
+            <a href="login.html">Volver al Login</a>
+        </div>
+    </div>
+    <script src="js/auth.js"></script>
+</body>
+</html>

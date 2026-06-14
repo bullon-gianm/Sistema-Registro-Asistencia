@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Terminal de Control General - Administrador</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="admin-container">
+        <h2 class="magenta-text">📊 Terminal de Monitoreo General de Asistencias</h2>
+        <p style="color: #8a92b2; margin-bottom: 25px; font-size: 14px;">REGISTRO CENTRALIZADO DE ACCIONES EN TIEMPO REAL</p>
+        
+        <button onclick="window.location.href='index.html'" class="btn-cyan" style="padding: 10px 20px; font-size: 14px; max-width: 250px;">◀ Volver al Panel Principal</button>
+        
+        <!-- Contenedor dinámico anti-descuadre -->
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Empleado de la Organización</th>
+                        <th>Identificador Electrónico</th>
+                        <th>Fecha de Registro</th>
+                        <th>Marcación Entrada</th>
+                        <th>Marcación Salida</th>
+                        <th>Acciones Administrativas</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaReportes"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- 🌌 VENTANA MODAL FLOTANTE PARA EDITAR REGISTROS -->
+    <div id="modalEditar" class="modal">
+        <div class="modal-content">
+            <h3 class="cyan-text" style="margin-bottom: 15px; text-transform: uppercase;">Modificar Registro</h3>
+            <form id="formEditar">
+                <input type="hidden" id="editId">
+                <label style="color:#8a92b2; font-size:12px; display:block; text-align:left;">Hora de Entrada (24h):</label>
+                <input type="text" id="editEntrada" placeholder="HH:MM:SS" required>
+                
+                <label style="color:#8a92b2; font-size:12px; display:block; text-align:left;">Hora de Salida (24h):</label>
+                <input type="text" id="editSalida" placeholder="HH:MM:SS">
+                
+                <div style="display: flex; gap: 10px; margin-top: 15px;">
+                    <button type="submit" class="btn-green" style="padding:10px;">Guardar</button>
+                    <button type="button" onclick="cerrarModal()" class="btn-magenta" style="padding:10px;">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/reportes.js"></script>
+</body>
+</html>
